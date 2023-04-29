@@ -4,7 +4,7 @@ const cors = require('cors');
 
 //Creamos servidor
 const app = express();
-
+const PORT = process.env.PORT || 4000; 
 
 //Conectamos a la BD
 conectarDB();
@@ -17,6 +17,6 @@ app.use('/api/proyectos', require('./routes/proyecto'));
 
 
 
-app.listen(4000, ()=>{
+app.listen(PORT, ()=>{
   console.log("El servidor esta corriendo al pelo")
 });
